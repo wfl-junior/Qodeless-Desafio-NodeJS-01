@@ -2,9 +2,9 @@
  * Required External Modules
  */
 
+import cors from "cors";
 import * as dotenv from "dotenv";
 import express from "express";
-import cors from "cors";
 import helmet from "helmet";
 
 dotenv.config();
@@ -14,7 +14,7 @@ dotenv.config();
  */
 
 if (!process.env.PORT) {
-	process.exit(1);
+  process.exit(1);
 }
 
 const PORT: number = parseInt(process.env.PORT as string, 10);
@@ -34,8 +34,8 @@ app.use(express.json());
  */
 
 app.listen(PORT, () => {
-	console.log(`Listening on port ${PORT}`);
+  console.log(`Listening on port ${PORT}`);
 
   // Escreva aqui a sua msg para o mundo
-  
+  console.log("OLÁ MUNDO, BORA QUEBRAR TUDO!");
 });
